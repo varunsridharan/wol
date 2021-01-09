@@ -1,6 +1,57 @@
 # Wake On Lan & Shutdown Script
 Script To Wake & Shutdown Remote System Using WOL (WakeOnLAN) and SSH for shutdown.
 
+## 📥  Installation
+Make sure to clone this repository to `/automation-scripts/` folder in your linux instance. 
+
+if you clone it in some other location make sure to update the location in each `*.sh` files
+
+```cmd
+git clone https://github.com/varunsridharan/wol /automation-scripts/
+```
+
+
+## 🚀 Usage
+
+### Sending Test Email Via CLI
+The below cmd can be used to send email via mailgun using cli 
+#### Arguments
+1. Email Subject
+2. Email Content / Message
+
+```shell
+bash /automation-scripts/email-notifiy.sh  "Hello World" "Some Message Value"
+```
+
+---
+
+### Power On
+The below cmd can be used to power on remote system 
+
+#### Arguments
+1. Remote System IP -- ___Used To Check if system is turned on___
+2. Remote System MAC Address -- ___Used To Send WOL Magic Packet___
+3. Remote System Name  -- ___Used In Email Notification___
+
+```shell
+bash /automation-scripts/power-on.sh "10.0.3.2" "38:D5:47:B2:BB:36" "Proxmox Backup Server"
+```
+
+---
+
+### Power Off
+
+#### Arguments
+1. Remote System IP  -- ___Used To Check if system is turned off___
+2. Remote System Username -- User with root ACCESS / permision to send shutdown signal
+3. Remote System Password
+4. Remote System MAC Address -- ___Used In Email Notification___
+5. Remote System Name -- ___Used In Email Notification___
+
+```shell
+bash /automation-scripts/power-off.sh "10.0.3.2" "root" "root-password" "38:D5:47:B2:BB:36" "Proxmox Backup Server"
+```
+
 
 <!-- START common-footer.mustache -->
 ## 📝 Changelog
