@@ -1,4 +1,5 @@
 # Wake On Lan & Shutdown Script
+![https://cdn.svarun.dev/gh/varunsridharan/wol/banner.png](https://cdn.svarun.dev/gh/varunsridharan/wol/banner.png)
 Script To Wake & Shutdown Remote System Using WOL (WakeOnLAN) and SSH for shutdown.
 
 ## 📥  Installation
